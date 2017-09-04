@@ -1,16 +1,13 @@
 ########## How To Use Docker Image ###############
 ##
-##  Image Name: denny/selenium:v1
+##  Image Name: denny/python-selenium:v1
 ##
-##  Dockerfile- Dockerfile
+##  Dockerfile https://github.com/DennyZhang/python-selenium/blob/master/Dockerfile
 ##  Docker hub link: 
-##
-##  Build docker image locally
-##    docker build --no-cache -t denny/selenium:v1 -f selenium_v1.dockerfile --rm=true .
 ##
 ##  Start container:
 ##    mkdir -p /tmp/screenshot && chmod 777 /tmp/screenshot
-##    docker run -d -p 4444:4444 -v /tmp/screenshot:/tmp/screenshot -h selenium --name selenium denny/selenium:v1
+##    docker run -d -p 4444:4444 -v /tmp/screenshot:/tmp/screenshot -h selenium --name selenium denny/python-selenium:v1
 ##
 ##  Run seleinum test
 ##    docker exec selenium python /home/seluser/selenium_load_page.py --page_url https://www.dennyzhang.com
@@ -25,8 +22,7 @@ MAINTAINER DennyZhang.com <http://dennyzhang.com>
 
 USER root
 
-ADD https://raw.githubusercontent.com/DennyZhang/devops_public/tag_v6/python/selenium_load_page/selenium_load_page.py \
-    /home/seluser/selenium_load_page.py
+ADD selenium_load_page.py /home/seluser/selenium_load_page.py
 
 # install selenium python sdk
 RUN apt-get -y update && apt-get install -y --no-install-recommends curl inetutils-ping && \
