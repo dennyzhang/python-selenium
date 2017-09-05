@@ -1,3 +1,5 @@
+Travis CI Status: [![Build Status](https://travis-ci.org/DennyZhang/python-selenium.svg?branch=master)](https://travis-ci.org/DennyZhang/python-selenium)
+
 # python-selenium
 Use Python Selenium For GUI Automation Test
 
