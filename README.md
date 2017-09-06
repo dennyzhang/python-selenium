@@ -3,6 +3,8 @@ Travis CI Status: [![Build Status](https://travis-ci.org/DennyZhang/python-selen
 # python-selenium
 Use Python Selenium For GUI Automation Test
 
+Read more: https://www.dennyzhang.com/python_selenium
+
 # How To Start Test
 ```
 # Start container
