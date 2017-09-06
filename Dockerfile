@@ -17,7 +17,7 @@
 
 # Base image: https://hub.docker.com/r/selenium/standalone-chrome/
 
-FROM selenium/standalone-chrome
+FROM selenium/standalone-chrome:3.5.3
 MAINTAINER DennyZhang.com <http://dennyzhang.com>
 
 USER root
@@ -39,7 +39,8 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends curl inetuti
     which curl && which ping && \
     python --version 2>&1 | grep 2.7.12 && \
     pip --version | grep 8.1.1 && \
-    pip list | grep selenium.*3.4.0
+    pip list | grep selenium.*3.4.0 && \
+    cksum /opt/selenium/selenium-server-standalone.jar | grep 46755906
 
 # Switch back to normal OS user
 USER seluser
