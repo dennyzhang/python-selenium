@@ -30,7 +30,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends curl inetuti
     chmod 777 /home/seluser/selenium_load_page.py && \
 
 # Download seleinum page load test scripts
-    pip install selenium==3.4.0 && \
+    pip install selenium==3.3.1 && \
 
 # Cleanup to make image small
     apt-get -y remove && apt-get -y autoremove && rm -rf /var/cache/apk/* && \
@@ -39,7 +39,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends curl inetuti
     which curl && which ping && \
     python --version 2>&1 | grep 2.7.12 && \
     pip --version | grep 8.1.1 && \
-    pip list | grep selenium.*3.4.0 && \
+    pip list | grep selenium.*3.3.1 && \
     cksum /opt/selenium/selenium-server-standalone.jar | grep 46755906
 
 # Switch back to normal OS user
