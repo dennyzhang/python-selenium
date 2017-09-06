@@ -30,7 +30,6 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-sleep_delay = 5
 IGNORE_ERROR_LIST = ["favicon.ico"]
 
 def load_page(page_url, remote_server, max_load_seconds, \
@@ -50,7 +49,7 @@ def load_page(page_url, remote_server, max_load_seconds, \
         start_clock = time.clock()
 
         end_clock = time.clock()
-        elapsed_seconds = ((end_clock - start_clock) * 1000 - sleep_delay)
+        elapsed_seconds = (end_clock - start_clock) * 1000
         if elapsed_seconds > max_load_seconds:
             print("ERROR: page load is too slow. It took %s seconds, more than %d seconds." \
                   % ("{:.2f}".format(elapsed_seconds), max_load_seconds))
