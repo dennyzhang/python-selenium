@@ -101,8 +101,7 @@ if __name__ == '__main__':
                         help="If page load takes too long, quit the test", type=int)
     parser.add_argument('--should_save_screenshot', required=False, dest='should_save_screenshot', \
                         action='store_true', default=True, \
-                        help="Once enabled, selenium will save the page as screenshot in the selenium server", \
-                        type=bool)
+                        help="Once enabled, selenium will save the page as screenshot in the selenium server")
     parser.add_argument('--screenshot_dir', required=False, default="/tmp/screenshot""", \
                         help="Where to save screenshots", type=str)
 
