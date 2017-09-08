@@ -50,7 +50,7 @@ def load_page(page_url, remote_server, max_load_seconds, \
 
         print("Open page: %s" % (page_url))
         start_clock = time.clock()
-
+        driver.get(page_url)
         end_clock = time.clock()
         elapsed_seconds = (end_clock - start_clock) * 1000
         if elapsed_seconds > max_load_seconds:

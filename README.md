@@ -8,7 +8,7 @@ Read more: https://www.dennyzhang.com/python_selenium
 # How To Start Test
 ```
 # Start container
-docker run -d -p 4444:4444 --restart=always \
+docker run -d --restart=always \
     -v /tmp/screenshot:/tmp/screenshot \
     -h selenium --name selenium denny/python-selenium:v1
 
