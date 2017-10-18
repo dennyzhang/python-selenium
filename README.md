@@ -28,7 +28,4 @@ docker exec selenium \
 ls -lth /tmp/screenshot
 ```
 
-# Check more
-- TODO
-
 Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).
